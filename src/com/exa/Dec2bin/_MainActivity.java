@@ -16,31 +16,32 @@ public class _MainActivity extends Activity implements View.OnClickListener {
 	EditText txtDecimal,txtBinary;
 
     Button btnAbout;
-    
-    /** Called when the activity is first created. */
+
+    /** other comment */
+
     @Override
     public void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity___main);
-        
+
         txtDecimal=(EditText)findViewById(R.id.txtDecimal);
         txtBinary=(EditText)findViewById(R.id.txtBinary);
-                                
+
         btnAbout=(Button)findViewById(R.id.button1);
         btnAbout.setOnClickListener(this);
     }
-        
+
     public String dec2bin(String dec)
     {
-    	
+
     	int base=2;
-    	
+
         if(dec.trim().length()==0)
-        {          
+        {
             return "";
         }
-        
+
         else
         {
             Stack<Object> stack=new Stack<Object>();
@@ -86,19 +87,19 @@ public class _MainActivity extends Activity implements View.OnClickListener {
             {
                 buffer.append(stack.pop().toString());
             }
-            
+
     		return buffer.toString();
-            
+
         }
 
     }
 
-    
+
     public String bin2dec(String bin){
-    	
+
 
     	if(bin.trim().length()==0)
-        {          
+        {
             return "";
         }
     	else{
@@ -111,27 +112,27 @@ public class _MainActivity extends Activity implements View.OnClickListener {
     		}
     		return String.valueOf(ans);
     	}
-    	
+
     }
 
 	public void onClick(View view)
 	// to display Information in a dialog box
 	{
-		
-		
+
+
 	   String dec=txtDecimal.getText().toString(), _dec;
 	   String bin=txtBinary.getText().toString(), _bin;
-	   
+
 	   _bin=dec2bin(dec);
 	   _dec=bin2dec(bin);
-	   
-	   
+
+
 	   // create a dialog box
 	   Builder builder=new Builder(this);
 	   // to allow cancelling the dialog box
 	   builder.setCancelable(true);
 	   // set title
-	   
+
 	   builder.setTitle("Los Resultados son:");
 	   // set message
 	   builder.setMessage("Binario: "+_bin+"   Decimal: "+_dec);
