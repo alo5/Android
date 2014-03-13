@@ -1,0 +1,20 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+    
+    <TextView android:text="Ingrese el numero decimal: " android:id="@+id/textView1" 
+      android:layout_width="wrap_content" android:layout_height="wrap_content"></TextView>
+    <EditText android:text="" android:id="@+id/txtDecimal" android:layout_width="match_parent" 
+      android:layout_height="wrap_content"></EditText>
+    
+    <TextView android:text="Ingrese el numero binario: " android:id="@+id/textView2" 
+      android:layout_width="wrap_content" android:layout_height="wrap_content"></TextView>
+    <EditText android:text="" android:id="@+id/txtBinary" android:layout_width="match_parent" 
+      android:layout_height="wrap_content"></EditText>
+    
+    <Button android:text="Calcular" android:id="@+id/button1" 
+      android:layout_width="wrap_content" android:layout_height="wrap_content"></Button>
+    
+</LinearLayout>
